@@ -9,5 +9,7 @@ The game works bug free inside the console.
 
 
 Rock beats Scissors
+
 Paper beats Rock
+
 Scissors beats Paper

@@ -62,7 +62,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 function game() {
-	for (computerScore = 0, playerScore = 0; computerScore < 5, playerScore < 5;) {
+	for (computerScore = 0, playerScore = 0; (computerScore < 5) && (playerScore < 5);) {
 		if (computerScore < 5 || playerScore < 5) {
 			let playerSelection = prompt("Please type Rock, Paper, or Scissors").toLowerCase();
 			console.log("Player: " + playerSelection);
@@ -73,7 +73,11 @@ function game() {
 			console.log("CPU Score: " + computerScore);
 		} 
 	}
-	console.log("Game over, refresh to play again!");
+	if (playerScore > computerScore) {
+		console.log("Congrats you win! Refresh browser to play again");
+	} else {
+		console.log("Sorry, the computer won! Refresh browser to player again");
+	}
 }
 
 game();
