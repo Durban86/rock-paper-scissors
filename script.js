@@ -13,11 +13,8 @@
 // If Player chooses Paper and Computer chooses Rock, Player wins
 // Create a running tally of wins for both Player and Computer, the first to 5 wins
 
-let playerSelection = prompt("Please type Rock, Paper, or Scissors").toLowerCase();
-
-console.log("Player: " + playerSelection);
-
-let computerSelection = getComputerSelection();
+let playerSelection;
+let computerSelection;
 
 function getComputerSelection() {
 	let computerSelection = Math.floor(Math.random() * 3) + 1
@@ -31,7 +28,7 @@ function getComputerSelection() {
 	}
 }
 
-console.log("CPU: " + computerSelection);
+
 
 let computerScore = 0;
 let playerScore = 0;
@@ -63,11 +60,24 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-console.log(playRound(playerSelection, computerSelection));
-console.log("CPU Score: " + computerScore);
 
-// function game() {
-// 	for (i = 0; i < 5; i++) {
-// 		playRound(playerSelection, computerSelection);
-// 	}
-// }
+function game() {
+	for (computerScore = 0, playerScore = 0; computerScore < 5, playerScore < 5;) {
+		if (computerScore < 5 || playerScore < 5) {
+			let playerSelection = prompt("Please type Rock, Paper, or Scissors").toLowerCase();
+			console.log("Player: " + playerSelection);
+			let computerSelection = getComputerSelection();
+			console.log("CPU: " + computerSelection);
+			console.log(playRound(playerSelection, computerSelection));
+			console.log("Player Score: " + playerScore);
+			console.log("CPU Score: " + computerScore);
+		} 
+	}
+	console.log("Game over, refresh to play again!");
+}
+
+game();
+
+
+
+
