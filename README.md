@@ -5,7 +5,7 @@ https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
 The game should end when the player or computer reaches 5 wins - solved, a for loop was used to track the score.
 
-The game works bug free inside the console.
+The game runs successfully inside the console.
 
 
 Rock beats Scissors
@@ -13,3 +13,4 @@ Rock beats Scissors
 Paper beats Rock
 
 Scissors beats Paper
+
