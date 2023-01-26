@@ -48,7 +48,7 @@ let playerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
 	if (playerSelection === computerSelection) {
-		p.innerText = "It's a tie!";
+		p.innerText = `It's a tie! You both selected ${playerSelection}`;
 		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "rock" && computerSelection === "paper") {
 		computerScore++;
@@ -163,8 +163,6 @@ playAgainButton.addEventListener('click', () => {
 
 // game();
 
-// buttons.forEach(button => button.addEventListener('click', getPlayerSelection));
-// console.log(buttons.classList);
 
 
 
